@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DB9AEE18-8806-4A32-9BFA-A20C97DF33B0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Channel.Mine.IMDB</RootNamespace>
+    <AssemblyName>Channel.Mine.IMDB</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Lucene.Net">
+      <HintPath>..\packages\Lucene.Net.2.9.2.2\lib\net40\Lucene.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.0.3\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Abstraction\BaseParser.cs" />
+    <Compile Include="Actions\IndexBuilder.cs" />
+    <Compile Include="Entities\Media.cs" />
+    <Compile Include="Collections\MediaCollection.cs" />
+    <Compile Include="Parsers\PlotParser.cs" />
+    <Compile Include="Parsers\ReleaseDateParser.cs" />
+    <Compile Include="Parsers\TitleParser.cs" />
+    <Compile Include="Parsers\RatingParser.cs" />
+    <Compile Include="Parsers\GenreParser.cs" />
+    <Compile Include="Parsers\MovieParser.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DataStore\actors.list" />
+    <None Include="DataStore\actresses.list" />
+    <None Include="DataStore\aka-names.list" />
+    <None Include="DataStore\aka-titles.list">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="DataStore\alternate-versions.list" />
+    <None Include="DataStore\biographies.list" />
+    <None Include="DataStore\business.list" />
+    <None Include="DataStore\certificates.list" />
+    <None Include="DataStore\cinematographers.list" />
+    <None Include="DataStore\color-info.list" />
+    <None Include="DataStore\complete-cast.list" />
+    <None Include="DataStore\complete-crew.list" />
+    <None Include="DataStore\composers.list" />
+    <None Include="DataStore\costume-designers.list" />
+    <None Include="DataStore\countries.list" />
+    <None Include="DataStore\crazy-credits.list" />
+    <None Include="DataStore\directors.list" />
+    <None Include="DataStore\distributors.list" />
+    <None Include="DataStore\editors.list" />
+    <None Include="DataStore\genres.list">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="DataStore\german-aka-titles.list" />
+    <None Include="DataStore\goofs.list" />
+    <None Include="DataStore\iso-aka-titles.list">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="DataStore\italian-aka-titles.list" />
+    <None Include="DataStore\keywords.list" />
+    <None Include="DataStore\language.list" />
+    <None Include="DataStore\laserdisc.list" />
+    <None Include="DataStore\literature.list" />
+    <None Include="DataStore\locations.list" />
+    <None Include="DataStore\miscellaneous-companies.list" />
+    <None Include="DataStore\miscellaneous.list" />
+    <None Include="DataStore\movie-links.list" />
+    <None Include="DataStore\movies.list">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="DataStore\mpaa-ratings-reasons.list">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="DataStore\plot.list">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="DataStore\producers.list" />
+    <None Include="DataStore\production-companies.list" />
+    <None Include="DataStore\production-designers.list" />
+    <None Include="DataStore\quotes.list" />
+    <None Include="DataStore\ratings.list" />
+    <None Include="DataStore\release-dates.list">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="DataStore\running-times.list" />
+    <None Include="DataStore\sound-mix.list" />
+    <None Include="DataStore\soundtracks.list" />
+    <None Include="DataStore\special-effects-companies.list" />
+    <None Include="DataStore\taglines.list" />
+    <None Include="DataStore\technical.list" />
+    <None Include="DataStore\trivia.list" />
+    <None Include="DataStore\writers.list" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Channel.Mine.Framework\Channel.Mine.Framework.csproj">
+      <Project>{0139E352-CB31-418B-A8C6-6DDBBC8E5C96}</Project>
+      <Name>Channel.Mine.Framework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
